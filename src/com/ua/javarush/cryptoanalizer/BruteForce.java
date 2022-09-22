@@ -1,18 +1,17 @@
 package com.ua.javarush.cryptoanalizer;
 
-import javax.swing.*;
+
 import java.util.ArrayList;
-import java.util.HashMap;
+
 import java.util.List;
-import java.util.Map;
+
 
 public class BruteForce {
 
-
     public static List<String> bruteForceDecode(String encryptedText) {
-
-        List<String> encodedTextsList = new ArrayList<>();
         String decodedText;
+        List<String> encodedTextsList = new ArrayList<>();
+
         for (int key = 0; key < CaesarEncryptor.cryptoSymbols.length; key++) {
             decodedText = CaesarEncryptor.decrypt(encryptedText, key);
             char mostUsed = mostCommonCharacter(decodedText);
@@ -20,7 +19,6 @@ public class BruteForce {
                 encodedTextsList.add(decodedText);
             }
         }
-        System.out.println(encodedTextsList);
 
         return encodedTextsList;
     }
@@ -29,6 +27,8 @@ public class BruteForce {
         char mostCommonChar;
         String mostUsedLetter="";
         int count = 0;
+
+
         String[] array = decodedText.split(" ");
 
         for (int i = 0; i < array.length; i++) {

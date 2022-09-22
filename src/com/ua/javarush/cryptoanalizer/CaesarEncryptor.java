@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class CaesarEncryptor {
 
-    public static String symbols = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzАаБбВвГгҐґДдЕеЄєЖжЗзИиІіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЬьЮюЯяЪъэЭыЫёЁ., \":-!?";
+    public static String symbols = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzАаБбВвГгҐґДдЕеЄєЖжЗзИиІіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЬьЮюЯяЪъэЭыЫёЁ., \"1-!?";
 
     public static char[] cryptoSymbols = symbols.toCharArray();
 

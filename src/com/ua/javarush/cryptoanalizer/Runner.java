@@ -91,7 +91,7 @@ public class Runner {
             Path filePath = Path.of(scanner.nextLine());
             if (Files.isRegularFile(filePath)) {
                 try {
-                    Files.lines(filePath, StandardCharsets.UTF_8);
+                   // Files.lines(filePath, StandardCharsets.UTF_8);
                     userText = Files.readString(filePath);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -126,10 +126,8 @@ public class Runner {
             increase++;
             file = new File(usersPath + "EncryptedText" + increase + ".txt");
         }
-        //if (!file.exists()) {
-        try {
 
-            //file.createNewFile();
+        try {
 
             FileWriter fw = new FileWriter(file.getAbsoluteFile());
             BufferedWriter bw = new BufferedWriter(fw);
@@ -155,10 +153,8 @@ public class Runner {
             increase++;
             file = new File(usersPath + "Decrypted" + increase + ".txt");
         }
-        // if (!file.exists()) {
-        try {
 
-            // file.createNewFile();
+        try {
 
             FileWriter fw = new FileWriter(file.getAbsoluteFile());
             BufferedWriter bw = new BufferedWriter(fw);
@@ -170,7 +166,6 @@ public class Runner {
 
         } catch (IOException ignored) {
         }
-        //}
         outputFile = Path.of(String.valueOf(file));
         return outputFile;
     }
